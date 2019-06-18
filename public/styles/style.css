@@ -1,0 +1,7 @@
+table {
+    border: 2pt solid;
+}
+
+td:hover {
+    background-color: beige;
+}
