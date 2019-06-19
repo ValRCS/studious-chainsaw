@@ -45,14 +45,21 @@
                     $tableheader = true;
                 }
                 echo "<tr id='row" . $row['id'] . "'>";
+                echo "<form action='update.php' method='POST'>";
                 foreach($row as $key=>$value) {
                     if ($key == 'id') {
                         echo "<td class='rowid'>{$value}</td>";
                     } else {
-                        echo "<td>{$value}</td>";
+                        if (in_array($key, ["name",	"album", "artist", "rating"	])) {
+                            echo "<td class='$key'><input type='text' name='$key' value = '$value'></td>";
+                        } else {
+                            echo "<td class='$key'>{$value}</td>";
+                        }
+                        
                     }
 
                 }
+                echo "<td><button name='updbtn' value='" . $row['id'] . "'>UPDATE</button></td></form>";
                 echo "<td><form action='delete.php' method='POST'><button name='delbut' value='" . $row['id'] . "'>DELETE</button></form></td>";
                 echo "</tr>";
             }

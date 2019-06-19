@@ -5,3 +5,8 @@ table {
 td:hover {
     background-color: beige;
 }
+
+.reg_date {
+    width: 50%;
+    background-color: burlywood;
+}
