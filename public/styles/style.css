@@ -10,3 +10,10 @@ td:hover {
     width: 50%;
     background-color: burlywood;
 }
+
+.icons {
+    width: 36px;
+    height: 36px;
+    border: 3px  solid green;
+    border-radius: 5%;
+}

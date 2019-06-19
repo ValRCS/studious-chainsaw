@@ -37,7 +37,8 @@
             echo "<table>";
             foreach ($rows as $row) {
                 if($tableheader == false) {
-                    echo '<tr>';
+                    echo '<tr><th>IMG</th>';
+                    
                     foreach($row as $key=>$value) {
                         echo "<th>{$key}</th>";
                     }
@@ -45,6 +46,7 @@
                     $tableheader = true;
                 }
                 echo "<tr id='row" . $row['id'] . "'>";
+                echo "<td><img src='" . $row['img'] . "' class='icons'></td>";
                 echo "<form action='update.php' method='POST'>";
                 foreach($row as $key=>$value) {
                     if ($key == 'id') {
